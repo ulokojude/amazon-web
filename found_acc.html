@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/trans.css">
+    <title>Account Recovery | Grabboss</title>
+  </head>
+  <body>
+    <div class="container min-vh-100 d-flex align-items-center">
+      <div class="row justify-content-center w-100">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
+          <div class="card signup-card shadow">
+            <div class="card-body p-4 ">
+              <h4 class="text-center">Account Found <br> Jude Uloko Ngbede</h4>
+              <form action="/backend/php_backend/acc_recov.php" method="post">
+                <div class="mb-3">
+                  <label for="" class="form-label">Change Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="password" placeholder="********" required>
+                    <span class="input-group-text password-toggle" onclick="togglePassword()">eye icon</span>
+                  </div>
+                </div>
+                <div class="d-grid mb-3">
+                  <button class="btn btn-primary btn-lg">Change Password</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function togglePassword() {
+        const password = document.getElementById("password");
+        password.type = password.type === "password" ? "text" : "password";
+      }
+    </script>
+  </body>
+</html>

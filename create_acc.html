@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/trans.css">
+    <title>Sign Up</title>
+    <style>
+      body{
+        background: #f8f9fa;
+      }
+      .signup-card {
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container min-vh-100 d-flex align-items-center">
+      <div class="row justify-content-center w-100">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
+          <div class="card signup-card shadow">
+            <div class="card-body p-4 ">
+              <h3 class="text-center mb-3">Grab Boss</h3>
+              <p class="text-center text-muted mb-4 h6">Sign up to start shopping</p>
+              <form action="/backend/php_backend/creat_acc.php" method="post">
+                <!-- Full Name -->
+                <div class="mb-3">
+                  <label for="" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" placeholder="Jude Uloko" required>
+                </div>
+                <!-- Email -->
+                <div class="mb-3">
+                  <label for="" class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="myadonaitech@gmail.com" required>
+                </div>
+                <!-- Password -->
+                <div class="mb-3">
+                  <label for="" class="form-label">Password</label>
+                  <div class="input-group">
+                    <input type="password" id="password" class="form-control" placeholder="*********" required>
+                    <span class="input-group-text password-toggle" onclick="togglePassword()">eye icon</span>
+                  </div>
+                </div>
+                <!-- Confirm Password -->
+                <div class="mb-3">
+                  <label for="" class="form-label">Confirm Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" placeholder="*********" required>
+                    <span class="input-group-text password-toggle" onclick="togglePassword()">eye icon</span>
+                  </div>
+                </div>
+                <!-- Submit -->
+                <div class="d-grid mb-3">
+                  <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
+                </div>
+                <!-- Login Link -->
+                <p class="text-center mb-0">
+                  already have an account?
+                  <a href="login.html" class="text-decoration-none">Login</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function togglePassword() {
+        const password = document.getElementById("password");
+        password.type = password.type === "password" ? "text" : "password";
+      }
+    </script>
+  </body>
+</html>

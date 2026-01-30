@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/trans.css">
+    <title>Account Recovery | Grabboss</title>
+  </head>
+  <body>
+    <div class="container min-vh-100 d-flex align-items-center">
+      <div class="row justify-content-center w-100">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
+          <div class="card signup-card shadow">
+            <div class="card-body p-4">
+              <div class="mb-3">
+                <h3 class="text-center mb-2">Account Recovery</h3>
+              </div>
+              <form action="/backend/php_backend/acc_search.php" method="post">
+                <!-- Email -->
+                <div class="mb-3">
+                  <label for="" class="form-label">Enter your email adress</label>
+                  <input type="email" class="form-control" placeholder="yours@email.com" required>
+                </div>
+                <!-- Submit -->
+                <div class="d-grid mb-3">
+                  <button class="btn btn-primary btn-lg">Search</button>
+                </div>
+                <!-- Searc with Phone -->
+                <p class="text-center mb-0">
+                  <a href="/fogot_pw2.html" class="text-decoration-none">Search with phone insted</a>
+                </p>
+                <p class="text-center mb-0">
+                  <a href="/login.html" class="text-decoration-none">Back to login</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
