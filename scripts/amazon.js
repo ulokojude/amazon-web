@@ -7,7 +7,7 @@ products.forEach((product) =>{
         <img class="product-image"
           src="${product.image}">
       </div>
-
+      
       <div class="product-name limit-text-to-2-lines">
         ${product.name}
       </div>
@@ -59,11 +59,6 @@ document.querySelector(".js-products-grid").innerHTML = productsHTML;
 
 document.querySelectorAll(".js-add-to-cart-button").forEach((button) =>{
   button.addEventListener("click", () => {
-    const productName = button.dataset.productName;
-    cart.push[{
-      productName: productName,
-      quantity: 1
-    }];
-    console.log(cart); 
+    
   });
 });
