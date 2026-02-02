@@ -40,15 +40,15 @@
                   <label for="" class="form-label">Password</label>
                   <div class="input-group">
                     <input type="password" id="password" class="form-control" placeholder="*********" required>
-                    <span class="input-group-text password-toggle" onclick="togglePassword()">eye icon</span>
+                    <span class="input-group-text password-toggle" onclick="togglePassword1()">eye icon</span>
                   </div>
                 </div>
                 <!-- Confirm Password -->
                 <div class="mb-3">
                   <label for="" class="form-label">Confirm Password</label>
                   <div class="input-group">
-                    <input type="password" class="form-control" placeholder="*********" required>
-                    <span class="input-group-text password-toggle" onclick="togglePassword()">eye icon</span>
+                    <input type="password" class="form-control" id="pw" placeholder="*********" required>
+                    <span class="input-group-text password-toggle" onclick="togglePassword2()">eye icon</span>
                   </div>
                 </div>
                 <!-- Submit -->
@@ -67,10 +67,17 @@
       </div>
     </div>
     <script>
-      function togglePassword() {
+      // Password hide and reveal button
+      function togglePassword1() {
         const password = document.getElementById("password");
         password.type = password.type === "password" ? "text" : "password";
       }
+
+      function togglePassword2() {
+        const password = document.getElementById("pw");
+        password.type = password.type === "password" ? "text" : "password";
+      }
+      
     </script>
   </body>
 </html>
