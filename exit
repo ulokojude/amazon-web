@@ -1,0 +1,408 @@
+[33mcommit d1dfe08648688cd341986fe8ccdcfb8f80dc22ca[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Tue Feb 3 11:48:03 2026 -0800
+
+    Started tests
+
+ checkout.html                    | 2 [32m+[m[31m-[m
+ scripts/checkout/orderSummary.js | 2 [32m+[m[31m-[m
+ tests/moneyTest.js               | 9 [32m+++++++++[m
+ tests/tests.html                 | 7 [32m+++++++[m
+ 4 files changed, 18 insertions(+), 2 deletions(-)
+
+[33mcommit 16cc145b0913bf00cb258ef84146a6abb046a524[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Tue Feb 3 10:49:43 2026 -0800
+
+    Make payment summary interactive
+
+ checkout.html                    | 11 [32m++[m[31m---------[m
+ scripts/checkout/orderSummary.js |  9 [32m++++[m[31m-----[m
+ 2 files changed, 6 insertions(+), 14 deletions(-)
+
+[33mcommit b0f123da139ecb77ef59dd8dc66038869dceb9c7[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Tue Feb 3 10:40:48 2026 -0800
+
+    Save data and generate HTML for payment summary
+
+ checkout.html                      | 36 [32m++[m[31m------------------[m
+ data/deliveryOptions.js            | 12 [32m++++++[m[31m-[m
+ data/products.js                   | 10 [32m++++++[m
+ scripts/checkout.js                |  4 [32m++[m[31m-[m
+ scripts/checkout/orderSummary.js   | 21 [32m+++[m[31m---------[m
+ scripts/checkout/paymentSummary.js | 69 [32m++++++++++++++++++++++++++++++++++++++[m
+ scripts/utils/money.js             |  2 [32m+[m[31m-[m
+ 7 files changed, 101 insertions(+), 53 deletions(-)
+
+[33mcommit 56a673d615cf341caff640fed6ba8a6a1bf74022[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Tue Feb 3 04:57:02 2026 -0800
+
+    Move orderSummary into its own file
+
+ data/cart.js                       |   9 [32m+[m[31m--[m
+ scripts/checkout.js                | 134 [32m+[m[31m-----------------------------------[m
+ scripts/checkout/orderSummary.js   | 137 [32m+++++++++++++++++++++++++++++++++++++[m
+ scripts/checkout/paymentSummary.js |   0
+ 4 files changed, 141 insertions(+), 139 deletions(-)
+
+[33mcommit 447c3f74549ca299dedc72ec7e8c7c59604128af[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 14:11:10 2026 -0800
+
+    Regenerate HTML when updating delivery option
+
+ scripts/checkout.js | 214 [32m++++++++++++++++++++++++++[m[31m--------------------------[m
+ 1 file changed, 106 insertions(+), 108 deletions(-)
+
+[33mcommit 14b950c72c1cc3f74d112071dcfc036e6f67564a[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 14:03:51 2026 -0800
+
+    Make delivery options interactive
+
+ data/cart.js        | 12 [32m++++++++++++[m
+ scripts/checkout.js | 14 [32m++++++++++++[m[31m--[m
+ 2 files changed, 24 insertions(+), 2 deletions(-)
+
+[33mcommit fa4ee3525352b9bdcb6e6f0018b09d7c4f5e8e33[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 13:48:13 2026 -0800
+
+    Save data and generate HTML for delivery options
+
+ amazon.html             |  1 [31m-[m
+ checkout.html           |  2 [32m+[m
+ data/cart.js            |  8 [32m++[m[31m--[m
+ data/deliveryOptions.js | 17 [32m+++++++++[m
+ scripts/checkout.js     | 97 [32m++++++++++++++++++++++++++++++[m[31m-------------------[m
+ scripts/utils/money.js  |  4 [32m+[m[31m-[m
+ 6 files changed, 86 insertions(+), 43 deletions(-)
+
+[33mcommit 364505cb3cdda725733e638e10c7f7d6092e1754[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 10:59:55 2026 -0800
+
+    Save cart in localStorage
+
+ data/cart.js | 59 [32m+++++++++++++++++++++++++++++++++++[m[31m------------------------[m
+ 1 file changed, 35 insertions(+), 24 deletions(-)
+
+[33mcommit 78ca8394efe4be1db0c0cac32fbe80705cc68973[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 02:50:36 2026 -0800
+
+    Delete product from HTML when clicking delete
+
+ scripts/checkout.js | 6 [32m+++++[m[31m-[m
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+[33mcommit ca9c3cb278d1609f7281a6310e967b75ad97a405[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 02:42:15 2026 -0800
+
+    Delete product from cart when clicking delete
+
+ data/cart.js        | 14 [32m+++++++++++++[m[31m-[m
+ scripts/checkout.js | 12 [32m++++++++++[m[31m--[m
+ 2 files changed, 23 insertions(+), 3 deletions(-)
+
+[33mcommit f063c58f20b036fae2710d625cae28e353d2a218[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 02:25:14 2026 -0800
+
+    Fixed price formating and radio selectors
+
+ scripts/amazon.js      | 3 [32m++[m[31m-[m
+ scripts/checkout.js    | 9 [32m+++++[m[31m----[m
+ scripts/utils/money.js | 3 [32m+++[m
+ 3 files changed, 10 insertions(+), 5 deletions(-)
+
+[33mcommit 10c82b992f3f738fc66a3b47fd1b9aa618571479[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 01:55:08 2026 -0800
+
+    Generate HTML for the order summary
+
+ checkout.html       | 151 [32m+[m[31m---------------------------------------------------[m
+ data/cart.js        |  39 [32m++++++++[m[31m------[m
+ scripts/checkout.js |  93 [32m++++++++++++++++++++++++++++++++[m
+ 3 files changed, 119 insertions(+), 164 deletions(-)
+
+[33mcommit 8081d1f6fe40ff31c532b7de7f45c5f1286d0d7b[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 01:23:24 2026 -0800
+
+    Move addtToCart into cart.js
+
+ amazon.html       |  2 [32m+[m[31m-[m
+ data/cart.js      | 20 [32m+++++++++++++++++++[m[31m-[m
+ scripts/amazon.js | 38 [32m+++++++++++++[m[31m-------------------------[m
+ 3 files changed, 33 insertions(+), 27 deletions(-)
+
+[33mcommit e56f54a55ccc22cf1b782f9dafaa233320a25456[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 01:09:31 2026 -0800
+
+    import products from products.js
+
+ amazon.html       | 1 [31m-[m
+ data/products.js  | 2 [32m+[m[31m-[m
+ scripts/amazon.js | 1 [32m+[m
+ 3 files changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 1ce2d97db8909ea85d6c07e9b662c4acd2ee9347[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Mon Feb 2 01:03:58 2026 -0800
+
+    Use module and import cart from cart.js
+
+ amazon.html       | 4 [32m++[m[31m--[m
+ data/cart.js      | 2 [32m+[m[31m-[m
+ scripts/amazon.js | 3 [32m++[m[31m-[m
+ 3 files changed, 5 insertions(+), 4 deletions(-)
+
+[33mcommit 6719e9ede61ce8f55800c3b8cc3bc59e41624565[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Sun Feb 1 17:11:31 2026 -0800
+
+    make the cartquantity interactive
+
+ amazon.html       | 2 [32m+[m[31m-[m
+ scripts/amazon.js | 8 [32m+++++++[m[31m-[m
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+[33mcommit 50b146cc73711febecee7441296fab3ea01e9ea1[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Sun Feb 1 17:03:33 2026 -0800
+
+    four
+
+ create_acc.html   | 15 [32m+++++++++++[m[31m----[m
+ db/users.html     | 10 [32m+++++[m[31m-----[m
+ scripts/amazon.js | 26 [32m++++++++++++++++++++++[m[31m----[m
+ 3 files changed, 38 insertions(+), 13 deletions(-)
+
+[33mcommit bb7c62517722dcae65884e9fc1a52fe433b53ce1[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Sat Jan 31 13:16:28 2026 -0800
+
+    three
+
+ db/users.html | 60 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++[m[31m----[m
+ 1 file changed, 56 insertions(+), 4 deletions(-)
+
+[33mcommit af0d4efe3df32282bd79dbc15f2dbbfacfd11135[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Sat Jan 31 12:06:51 2026 -0800
+
+    three
+
+ backend/php_backend/acc_recov.php  | 2 [32m+[m[31m-[m
+ backend/php_backend/acc_search.php | 3 [32m+++[m
+ backend/php_backend/connect_db.php | 2 [32m+[m[31m-[m
+ backend/php_backend/creat_acc.php  | 2 [32m+[m[31m-[m
+ backend/php_backend/login.php      | 2 [32m+[m[31m-[m
+ backend/php_backend/logout.php     | 2 [32m+[m[31m-[m
+ backend/php_backend/pw_reset.php   | 2 [32m+[m[31m-[m
+ router.html                        | 0
+ 8 files changed, 9 insertions(+), 6 deletions(-)
+
+[33mcommit 7171aa8fb114711917316aede0ec830f7abbe472[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Sat Jan 31 10:30:57 2026 -0800
+
+    two
+
+ amazon.html                  |  15 [32m+[m[31m-----[m
+ dashboard/usr_dashboard.html |  13 [31m-----[m
+ db/users.html                | 114 [32m+++++++++++++++++++++++++++++++++++++++++++[m
+ scripts/amazon.js            |   9 [32m+[m[31m---[m
+ 4 files changed, 117 insertions(+), 34 deletions(-)
+
+[33mcommit 4785852cd81a1176e6b20f83bd4cdfa1b70b91f5[m
+Author: ulokojude <myadonaitech@gmail.com>
+Date:   Fri Jan 30 10:04:07 2026 -0800
+
+    one
+
+ amazon.html                                        |    66 [32m+[m
+ backend/php_backend/acc_recov.php                  |     3 [32m+[m
+ backend/php_backend/acc_search.php                 |     0
+ backend/php_backend/connect_db.php                 |     6 [32m+[m
+ backend/php_backend/creat_acc.php                  |     3 [32m+[m
+ backend/php_backend/login.php                      |     3 [32m+[m
+ backend/php_backend/logout.php                     |     3 [32m+[m
+ backend/php_backend/pw_reset.php                   |     3 [32m+[m
+ backend/products.json                              |   660 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap-grid.css        |  4085 [32m+++++++[m
+ bootstrap-5.3.8-dist/css/bootstrap-grid.css.map    |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap-grid.min.css    |     6 [32m+[m
+ .../css/bootstrap-grid.min.css.map                 |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap-grid.rtl.css    |  4084 [32m+++++++[m
+ .../css/bootstrap-grid.rtl.css.map                 |     1 [32m+[m
+ .../css/bootstrap-grid.rtl.min.css                 |     6 [32m+[m
+ .../css/bootstrap-grid.rtl.min.css.map             |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap-reboot.css      |   601 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap-reboot.css.map  |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap-reboot.min.css  |     6 [32m+[m
+ .../css/bootstrap-reboot.min.css.map               |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap-reboot.rtl.css  |   598 [32m+[m
+ .../css/bootstrap-reboot.rtl.css.map               |     1 [32m+[m
+ .../css/bootstrap-reboot.rtl.min.css               |     6 [32m+[m
+ .../css/bootstrap-reboot.rtl.min.css.map           |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap-utilities.css   |  5406 [32m+++++++++[m
+ .../css/bootstrap-utilities.css.map                |     1 [32m+[m
+ .../css/bootstrap-utilities.min.css                |     6 [32m+[m
+ .../css/bootstrap-utilities.min.css.map            |     1 [32m+[m
+ .../css/bootstrap-utilities.rtl.css                |  5397 [32m+++++++++[m
+ .../css/bootstrap-utilities.rtl.css.map            |     1 [32m+[m
+ .../css/bootstrap-utilities.rtl.min.css            |     6 [32m+[m
+ .../css/bootstrap-utilities.rtl.min.css.map        |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap.css             | 12048 [32m+++++++++++++++++++[m
+ bootstrap-5.3.8-dist/css/bootstrap.css.map         |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap.min.css         |     6 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap.min.css.map     |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap.rtl.css         | 12021 [32m++++++++++++++++++[m
+ bootstrap-5.3.8-dist/css/bootstrap.rtl.css.map     |     1 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap.rtl.min.css     |     6 [32m+[m
+ bootstrap-5.3.8-dist/css/bootstrap.rtl.min.css.map |     1 [32m+[m
+ bootstrap-5.3.8-dist/js/bootstrap.bundle.js.map    |     1 [32m+[m
+ .../js/bootstrap.bundle.min.js.map                 |     1 [32m+[m
+ bootstrap-5.3.8-dist/js/bootstrap.esm.js.map       |     1 [32m+[m
+ bootstrap-5.3.8-dist/js/bootstrap.esm.min.js.map   |     1 [32m+[m
+ bootstrap-5.3.8-dist/js/bootstrap.js.map           |     1 [32m+[m
+ bootstrap-5.3.8-dist/js/bootstrap.min.js.map       |     1 [32m+[m
+ checkout.html                                      |   232 [32m+[m
+ create_acc.html                                    |    76 [32m+[m
+ dashboard/usr_dashboard.html                       |    13 [32m+[m
+ data/cart.js                                       |     1 [32m+[m
+ data/products.js                                   |   660 [32m+[m
+ fogot_password.html                                |    40 [32m+[m
+ fogot_pw1.html                                     |    43 [32m+[m
+ fogot_pw2.html                                     |    43 [32m+[m
+ found_acc.html                                     |    41 [32m+[m
+ images/amazon-logo-white.png                       |   Bin [31m0[m -> [32m3189[m bytes
+ images/amazon-logo.png                             |   Bin [31m0[m -> [32m9612[m bytes
+ images/amazon-mobile-logo-white.png                |   Bin [31m0[m -> [32m4357[m bytes
+ images/amazon-mobile-logo.png                      |   Bin [31m0[m -> [32m4079[m bytes
+ images/appliance-instructions.png                  |   Bin [31m0[m -> [32m552941[m bytes
+ images/appliance-warranty.png                      |   Bin [31m0[m -> [32m317370[m bytes
+ images/clothing-size-chart.png                     |   Bin [31m0[m -> [32m59890[m bytes
+ images/icons/buy-again.png                         |   Bin [31m0[m -> [32m3484[m bytes
+ images/icons/cart-icon.png                         |   Bin [31m0[m -> [32m1137[m bytes
+ images/icons/checkmark.png                         |   Bin [31m0[m -> [32m1012[m bytes
+ images/icons/checkout-lock-icon.png                |   Bin [31m0[m -> [32m247[m bytes
+ images/icons/hamburger-menu.png                    |   Bin [31m0[m -> [32m149[m bytes
+ images/icons/search-icon.png                       |   Bin [31m0[m -> [32m1802[m bytes
+ images/products/6-piece-non-stick-baking-set.webp  |   Bin [31m0[m -> [32m17708[m bytes
+ images/products/6-piece-white-dinner-plate-set.jpg |   Bin [31m0[m -> [32m18852[m bytes
+ .../adults-plain-cotton-tshirt-2-pack-teal.jpg     |   Bin [31m0[m -> [32m50665[m bytes
+ images/products/athletic-cotton-socks-6-pairs.jpg  |   Bin [31m0[m -> [32m52578[m bytes
+ images/products/backpack.jpg                       |   Bin [31m0[m -> [32m161468[m bytes
+ images/products/bathroom-rug.jpg                   |   Bin [31m0[m -> [32m31875[m bytes
+ images/products/black-2-slot-toaster.jpg           |   Bin [31m0[m -> [32m40662[m bytes
+ images/products/blackout-curtain-set-beige.webp    |   Bin [31m0[m -> [32m20196[m bytes
+ images/products/blackout-curtains-black.jpg        |   Bin [31m0[m -> [32m44822[m bytes
+ .../coffeemaker-with-glass-carafe-black.jpg        |   Bin [31m0[m -> [32m37819[m bytes
+ images/products/cotton-bath-towels-teal.webp       |   Bin [31m0[m -> [32m18144[m bytes
+ images/products/countertop-blender-64-oz.jpg       |   Bin [31m0[m -> [32m8994[m bytes
+ ...ouble-elongated-twist-french-wire-earrings.webp |   Bin [31m0[m -> [32m14952[m bytes
+ images/products/duvet-cover-set-blue-twin.jpg      |   Bin [31m0[m -> [32m27095[m bytes
+ .../electric-glass-and-steel-hot-water-kettle.webp |   Bin [31m0[m -> [32m26358[m bytes
+ images/products/facial-tissue-2-ply-18-boxes.jpg   |   Bin [31m0[m -> [32m27438[m bytes
+ images/products/floral-mixing-bowl-set.jpg         |   Bin [31m0[m -> [32m33906[m bytes
+ .../products/intermediate-composite-basketball.jpg |   Bin [31m0[m -> [32m165122[m bytes
+ images/products/kitchen-paper-towels-30-pack.jpg   |   Bin [31m0[m -> [32m6999[m bytes
+ images/products/knit-athletic-sneakers-gray.jpg    |   Bin [31m0[m -> [32m31653[m bytes
+ images/products/knit-athletic-sneakers-pink.webp   |   Bin [31m0[m -> [32m19502[m bytes
+ images/products/liquid-laundry-detergent-plain.jpg |   Bin [31m0[m -> [32m41231[m bytes
+ images/products/luxury-tower-set-6-piece.jpg       |   Bin [31m0[m -> [32m72369[m bytes
+ images/products/men-athletic-shoes-green.jpg       |   Bin [31m0[m -> [32m48111[m bytes
+ images/products/men-chino-pants-beige.jpg          |   Bin [31m0[m -> [32m25920[m bytes
+ .../products/men-cozy-fleece-zip-up-hoodie-red.jpg |   Bin [31m0[m -> [32m44502[m bytes
+ images/products/men-golf-polo-t-shirt-blue.jpg     |   Bin [31m0[m -> [32m28816[m bytes
+ images/products/men-navigator-sunglasses-brown.jpg |   Bin [31m0[m -> [32m15932[m bytes
+ .../products/men-slim-fit-summer-shorts-gray.jpg   |   Bin [31m0[m -> [32m31207[m bytes
+ .../products/non-stick-cooking-set-15-pieces.webp  |   Bin [31m0[m -> [32m16618[m bytes
+ .../plain-hooded-fleece-sweatshirt-yellow.jpg      |   Bin [31m0[m -> [32m35421[m bytes
+ .../round-airtight-food-storage-containers.jpg     |   Bin [31m0[m -> [32m36273[m bytes
+ images/products/round-sunglasses-black.jpg         |   Bin [31m0[m -> [32m15956[m bytes
+ images/products/sky-flower-stud-earrings.webp      |   Bin [31m0[m -> [32m20572[m bytes
+ images/products/straw-sunhat.webp                  |   Bin [31m0[m -> [32m26720[m bytes
+ .../trash-can-with-foot-pedal-50-liter.jpg         |   Bin [31m0[m -> [32m25413[m bytes
+ images/products/umbrella.jpg                       |   Bin [31m0[m -> [32m55975[m bytes
+ images/products/vanity-mirror-silver.jpg           |   Bin [31m0[m -> [32m37117[m bytes
+ .../adults-plain-cotton-tshirt-2-pack-black.jpg    |   Bin [31m0[m -> [32m22887[m bytes
+ ...dults-plain-cotton-tshirt-2-pack-plus-black.jpg |   Bin [31m0[m -> [32m31792[m bytes
+ .../adults-plain-cotton-tshirt-2-pack-red.jpg      |   Bin [31m0[m -> [32m32370[m bytes
+ .../adults-plain-cotton-tshirt-2-pack-teal.jpg     |   Bin [31m0[m -> [32m50665[m bytes
+ .../variations/duvet-cover-set-blue-queen.jpg      |   Bin [31m0[m -> [32m25816[m bytes
+ .../variations/duvet-cover-set-blue-twin.jpg       |   Bin [31m0[m -> [32m27095[m bytes
+ .../variations/duvet-cover-set-red-queen.jpg       |   Bin [31m0[m -> [32m25698[m bytes
+ .../variations/duvet-cover-set-red-twin.jpg        |   Bin [31m0[m -> [32m28897[m bytes
+ .../liquid-laundry-detergent-lavender.jpg          |   Bin [31m0[m -> [32m38472[m bytes
+ .../variations/liquid-laundry-detergent-plain.jpg  |   Bin [31m0[m -> [32m41231[m bytes
+ .../variations/luxury-tower-set-4-piece.jpg        |   Bin [31m0[m -> [32m68677[m bytes
+ .../variations/luxury-tower-set-6-piece.jpg        |   Bin [31m0[m -> [32m72369[m bytes
+ .../variations/men-athletic-shoes-black.jpg        |   Bin [31m0[m -> [32m33737[m bytes
+ .../variations/men-athletic-shoes-green.jpg        |   Bin [31m0[m -> [32m48111[m bytes
+ .../products/variations/men-chino-pants-beige.jpg  |   Bin [31m0[m -> [32m25920[m bytes
+ .../products/variations/men-chino-pants-black.jpg  |   Bin [31m0[m -> [32m19784[m bytes
+ .../products/variations/men-chino-pants-green.jpg  |   Bin [31m0[m -> [32m35524[m bytes
+ .../men-cozy-fleece-zip-up-hoodie-black.jpg        |   Bin [31m0[m -> [32m26047[m bytes
+ .../men-cozy-fleece-zip-up-hoodie-red.jpg          |   Bin [31m0[m -> [32m44502[m bytes
+ .../variations/men-golf-polo-t-shirt-black.jpg     |   Bin [31m0[m -> [32m23733[m bytes
+ .../variations/men-golf-polo-t-shirt-blue.jpg      |   Bin [31m0[m -> [32m28816[m bytes
+ .../variations/men-golf-polo-t-shirt-red.jpg       |   Bin [31m0[m -> [32m25328[m bytes
+ .../variations/men-navigator-sunglasses-brown.jpg  |   Bin [31m0[m -> [32m15932[m bytes
+ .../variations/men-navigator-sunglasses-silver.jpg |   Bin [31m0[m -> [32m13458[m bytes
+ .../men-slim-fit-summer-shorts-beige.jpg           |   Bin [31m0[m -> [32m27036[m bytes
+ .../men-slim-fit-summer-shorts-black.jpg           |   Bin [31m0[m -> [32m23571[m bytes
+ .../variations/men-slim-fit-summer-shorts-gray.jpg |   Bin [31m0[m -> [32m31207[m bytes
+ .../plain-hooded-fleece-sweatshirt-teal.jpg        |   Bin [31m0[m -> [32m30669[m bytes
+ .../plain-hooded-fleece-sweatshirt-yellow.jpg      |   Bin [31m0[m -> [32m35421[m bytes
+ .../products/variations/round-sunglasses-black.jpg |   Bin [31m0[m -> [32m15956[m bytes
+ .../products/variations/round-sunglasses-gold.jpg  |   Bin [31m0[m -> [32m15082[m bytes
+ .../trash-can-with-foot-pedal-30-liter-tall.jpg    |   Bin [31m0[m -> [32m22895[m bytes
+ .../trash-can-with-foot-pedal-50-liter.jpg         |   Bin [31m0[m -> [32m25413[m bytes
+ .../women-french-terry-fleece-jogger-camo.jpg      |   Bin [31m0[m -> [32m34776[m bytes
+ .../women-french-terry-fleece-jogger-gray.jpg      |   Bin [31m0[m -> [32m42284[m bytes
+ .../variations/women-knit-ballet-flat-black.jpg    |   Bin [31m0[m -> [32m16869[m bytes
+ .../variations/women-knit-ballet-flat-gray.jpg     |   Bin [31m0[m -> [32m31751[m bytes
+ .../variations/women-knit-ballet-flat-leopard.jpg  |   Bin [31m0[m -> [32m38331[m bytes
+ .../women-stretch-popover-hoodie-black.jpg         |   Bin [31m0[m -> [32m118608[m bytes
+ .../women-stretch-popover-hoodie-blue.jpg          |   Bin [31m0[m -> [32m40795[m bytes
+ .../women-stretch-popover-hoodie-gray.jpg          |   Bin [31m0[m -> [32m51013[m bytes
+ images/products/women-beach-sandals.jpg            |   Bin [31m0[m -> [32m19869[m bytes
+ .../women-chiffon-beachwear-coverup-black.jpg      |   Bin [31m0[m -> [32m26613[m bytes
+ images/products/women-chunky-beanie-gray.webp      |   Bin [31m0[m -> [32m43916[m bytes
+ .../women-french-terry-fleece-jogger-camo.jpg      |   Bin [31m0[m -> [32m34776[m bytes
+ images/products/women-knit-ballet-flat-black.jpg   |   Bin [31m0[m -> [32m16869[m bytes
+ .../women-stretch-popover-hoodie-black.jpg         |   Bin [31m0[m -> [32m118608[m bytes
+ images/ratings/rating-0.png                        |   Bin [31m0[m -> [32m1471[m bytes
+ images/ratings/rating-05.png                       |   Bin [31m0[m -> [32m1677[m bytes
+ images/ratings/rating-10.png                       |   Bin [31m0[m -> [32m1743[m bytes
+ images/ratings/rating-15.png                       |   Bin [31m0[m -> [32m1830[m bytes
+ images/ratings/rating-20.png                       |   Bin [31m0[m -> [32m1761[m bytes
+ images/ratings/rating-25.png                       |   Bin [31m0[m -> [32m1793[m bytes
+ images/ratings/rating-30.png                       |   Bin [31m0[m -> [32m1747[m bytes
+ images/ratings/rating-35.png                       |   Bin [31m0[m -> [32m1826[m bytes
+ images/ratings/rating-40.png                       |   Bin [31m0[m -> [32m1747[m bytes
+ images/ratings/rating-45.png                       |   Bin [31m0[m -> [32m1594[m bytes
+ images/ratings/rating-50.png                       |   Bin [31m0[m -> [32m1286[m bytes
+ login.html                                         |    69 [32m+[m
+ orders.html                                        |   185 [32m+[m
+ reset_password.html                                |    80 [32m+[m
+ scripts/amazon.js                                  |    69 [32m+[m
+ styles/pages/amazon.css                            |   156 [32m+[m
+ styles/pages/checkout/checkout-header.css          |   103 [32m+[m
+ styles/pages/checkout/checkout.css                 |   211 [32m+[m
+ styles/pages/orders.css                            |   220 [32m+[m
+ styles/pages/tracking.css                          |    81 [32m+[m
+ styles/shared/amazon-header.css                    |   149 [32m+[m
+ styles/shared/general.css                          |   101 [32m+[m
+ styles/trans.css                                   |     0
+ tracking.html                                      |    92 [32m+[m
+ 178 files changed, 47722 insertions(+)
